@@ -20,26 +20,26 @@ app.factory('AdminService', ['$http','$state','$rootScope', function ($http, $st
 // SUBCATEGORIES
         getSubcategories: function () {
             return $http({
-                url: "http://localhost:8081/subCategory/get",
+                url: "http://185.65.246.204:8081/subCategory/get",
                 method: "GET"
             })
         },
         changeSubcategory: function (subcategory) {
             return $http({
-                url: "http://localhost:8081/subCategory/update",
+                url: "http://185.65.246.204:8081/subCategory/update",
                 method: "PUT",
                 data: subcategory
             })
         }, deleteSubcategory: function (id) {
             return $http({
-                url: "http://localhost:8081/subCategory/delete/" + id,
+                url: "http://185.65.246.204:8081/subCategory/delete/" + id,
                 method: "DELETE"
             })
         },
 
         addSubcategory: function (subcategory) {
             return $http({
-                url: "http://localhost:8081/subCategory/add",
+                url: "http://185.65.246.204:8081/subCategory/add",
                 method: "POST",
                 data: subcategory
             })
@@ -49,7 +49,7 @@ app.factory('AdminService', ['$http','$state','$rootScope', function ($http, $st
 
         getProduct: function () {
             return $http({
-                url: "http://localhost:8081/commodity/get",
+                url: "http://185.65.246.204:8081/commodity/get",
                 method: "GET"
             })
         },
@@ -62,13 +62,13 @@ app.factory('AdminService', ['$http','$state','$rootScope', function ($http, $st
         },
         deleteProduct: function (product) {
             return $http({
-                url: "http://localhost:8081/commodity/delete/" + product.id,
+                url: "http://185.65.246.204:8081/commodity/delete/" + product.id,
                 method: "DELETE"
             })
         },
         addProduct: function (product) {
             return $http({
-                url: "http://localhost:8081/commodity/add",
+                url: "http://185.65.246.204:8081/commodity/add",
                 method: "POST",
                 data: product
             })
@@ -81,14 +81,14 @@ app.factory('AdminService', ['$http','$state','$rootScope', function ($http, $st
 
         addNewies: function (news) {
             return $http({
-                url: "http://localhost:8081/news/add",
+                url: "http://185.65.246.204:8081/news/add",
                 method: "POST",
                 data: news
             });
         },
     getNewies:function() {
         return $http({
-            url: "http://localhost:8081/news/get",
+            url: "http://185.65.246.204:8081/news/get",
             method: "GET"
         });
     }
@@ -96,7 +96,7 @@ app.factory('AdminService', ['$http','$state','$rootScope', function ($http, $st
     changeNewies:function(news) {
 
         return $http({
-            url: "http://localhost:8081/news/update",
+            url: "http://185.65.246.204:8081/news/update",
             method: "PUT",
             data: news
         })
@@ -104,7 +104,7 @@ app.factory('AdminService', ['$http','$state','$rootScope', function ($http, $st
     ,
     deleteNewies:function(id) {
         return $http({
-            url: "http://localhost:8081/news/delete/" + id,
+            url: "http://185.65.246.204:8081/news/delete/" + id,
             method: "DELETE"
         });
     },
