@@ -1,4 +1,4 @@
-app.controller('ordersCtrl',['UserService',function (UserService) {
+app.controller('ordersCtrl',['AdminService',function (AdminService) {
     var vm=this;
     vm.editOrd={}
 
@@ -10,27 +10,27 @@ app.controller('ordersCtrl',['UserService',function (UserService) {
 
     vm.saveChangeOrder=function () {
         if(vm.editOrd!=null){
-            UserService.updateOrder(vm.editOrd);
+            AdminService.updateOrder(vm.editOrd);
         }
     }
 
     vm.deleteOrder=function (id) {
-        UserService.deleteOrder(id);
+        AdminService.deleteOrder(id);
     }
 
     vm.archiveOrder=function (id) {
-        UserService.orderToArchive(id);
+        AdminService.orderToArchive(id);
     }
 
     vm.archiveBack=function (id) {
-        UserService.archiveBack(id);
+        AdminService.archiveBack(id);
     }
 
 
 
     vm.init=function () {
-        vm.orders=UserService.getOrder();
-        vm.archive=UserService.getArchive();
+        vm.orders=AdminService.getOrder();
+        vm.archive=AdminService.getArchive();
     }
     vm.init();
 

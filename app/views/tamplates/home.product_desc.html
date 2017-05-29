@@ -1,24 +1,26 @@
-<section class="product-description-block">
+<div class="anim-fade">
+<section class="product-description-block" ng-if="prod.currentProduct">
     <div class="container">
         <div class="slider">
-            <div class="slider-block"><img class="slider-images" src=" images/slid1.jpg" alt=""></div>
-            <div class="slider-block"><img class="slider-images" src=" images/slid2.jpg" alt=""></div>
-            <div class="slider-block"><img class="slider-images" src=" images/slid3.jpg" alt=""></div>
-            <div class="slider-block"><img class="slider-images" src=" images/slid4.jpg" alt=""></div>
-            <div class="slider-block"><img class="slider-images" src=" images/slid5.jpg" alt=""></div>
+            <div class="slider-block"><img class="slider-images" src="http://localhost:8081{{prod.currentProduct.img}}" alt=""></div>
+            <!--<div class="slider-block"><img class="slider-images" src=" images/slid2.jpg" alt=""></div>-->
+            <!--<div class="slider-block"><img class="slider-images" src=" images/slid3.jpg" alt=""></div>-->
+            <!--<div class="slider-block"><img class="slider-images" src=" images/slid4.jpg" alt=""></div>-->
+            <!--<div class="slider-block"><img class="slider-images" src=" images/slid5.jpg" alt=""></div>-->
         </div>
         <div class="product-description-info">
-            <div class="product-description-title">Marlboro Cast Stone Fireplace</div>
+            <div class="product-description-title">{{prod.currentProduct | translator:"nameCommodities"}}</div>
             <div class="product-description-text">
-                <p>Marlboro a slim mantel surround with an arch that accents the firebox. Pictured in precast which is similar to cast stone. Elegant curved trim with straight lines make it a great contemporary option. This design also works great in a traditional or modern setting. Have it installed in you craftsman home.
-                </p>
-                <p>Typical Dimensions: 64″ wide x 52″ high *can be made to custom dimensions. Firebox Opening: made-to-order</p>
-                <p>Stone: cast stone, limestone, sandstone, marble, travertine etc. Available in many different colors, textures and finishes.</p>
-                <p>Price: Cast Stone $3,599</p>
-                <p>Travertine $3,999</p>
-                <p>Sandstone $4,099</p>
-                <p>Limestone $5,300</p>
-                <p>Marble $4,120</p>
+                <!--<p>Marlboro a slim mantel surround with an arch that accents the firebox. Pictured in precast which is similar to cast stone. Elegant curved trim with straight lines make it a great contemporary option. This design also works great in a traditional or modern setting. Have it installed in you craftsman home.-->
+                <!--</p>-->
+                <!--<p>Typical Dimensions: 64″ wide x 52″ high *can be made to custom dimensions. Firebox Opening: made-to-order</p>-->
+                <!--<p>Stone: cast stone, limestone, sandstone, marble, travertine etc. Available in many different colors, textures and finishes.</p>-->
+                <!--<p>Price: Cast Stone $3,599</p>-->
+                <!--<p>Travertine $3,999</p>-->
+                <!--<p>Sandstone $4,099</p>-->
+                <!--<p>Limestone $5,300</p>-->
+                <!--<p>Marble $4,120</p>-->
+                <p>{{prod.currentProduct | translator:"description"}}</p>
             </div>
         </div>
     </div>
@@ -30,19 +32,14 @@
     </div>
 </section>
 
-<section class="other-product-block">
+<section class="other-product-block" ng-if="prod.similarProducts">
     <div class="container">
-        <div class="product"   >
-            <div class="other-product-categories-images"><img src=" images/product/1.png" alt=""></div>
-            <div class="other-product-categories-title">Назва каміну</div>
-        </div>
-        <div class="product"   >
-            <div class="other-product-categories-images"><img src=" images/123.jpg" alt=""></div>
-            <div class="other-product-categories-title">Назва каміну</div>
-        </div>
-        <div class="product"   >
-            <div class="other-product-categories-images"><img src=" images/product/1.png" alt=""></div>
-            <div class="other-product-categories-title">Назва каміну</div>
+        <div class="product"  ng-repeat="product in prod.similarProducts" >
+            <a ui-sref="home.product({fireplaceId: product.id})" class="wrap-product" ng-click="scrollTop('anchor')">
+            <div class="other-product-categories-images"><img src="http://localhost:8081{{product.img}}" alt=""></div>
+            <div class="other-product-categories-title">{{product | translator:"nameCommodities"}}</div>
+            </a>
         </div>
     </div>
 </section>
+</div>

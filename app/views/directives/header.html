@@ -1,4 +1,4 @@
-<div class="top-header">
+<div class="top-header" id="anchor">
     <div class="container">
         <div class="contact">
             <div class="top-header-phone"><p>+380977777777</p></div>
@@ -9,10 +9,11 @@
         <div class="top-header-lang">
             <div class="lang">
                 <ul>
-                    <li class="lang-en disable"><a href="#">EN</a></li>
-                    <li class="lang-ua"><a href="#">UA</a></li>
-                    <li class="lang-pl disable"><a href="#">PL</a></li>
-                    <li class="lang-ru disable"><a href="#">RU</a></li>
+                    <li class="lang-en" ng-class="language!='Eng' ? 'disable' : 'x'"><a href="" ng-click="changeLanguage('Eng')">En</a></li>
+                    <li class="lang-ua" ng-class="language!='Ua' ? 'disable' : 'x'"><a href="" ng-click="changeLanguage('Ua')">UA</a></li>
+                    <li class="lang-pl" ng-class="language!='Pl' ? 'disable' : 'x'"><a href="" ng-click="changeLanguage('Pl')">PL</a></li>
+                    <!--<li class="lang-ru disable"><a href="#" ng-click="changeLanguage('RU')">RU</a></li>-->
+                    <!--disable-->
                 </ul>
             </div>
         </div>
@@ -21,36 +22,37 @@
 
 <header id="header" class="header-element">
     <div class="header-anchor"></div>
-    <div class="header header-container">
+    <div class="header header-container" ng-class='headerThin'>
         <div class="container">
-            <div class="top-logo" ></div>
+            <div class="top-logo" ng-class='logoSmall'></div>
             <nav class="top-menu">
                 <ul>
-                    <li><a href="#!/homemain">Головна</a></li>
-                    <li><a href="#!/homenews">Новини</a></li>
-                    <li><a href="#!/homefireplace">Каміни</a></li>
-                    <li><a href="#!/homesculpture">Скульптура</a></li>
-                    <li><a href="#!/homearchitecture">Архітектура</a></li>
-                    <li><a href="#!/homecontact">Контакти</a></li>
+                    <li><a ui-sref="home.main"  ng-click="scrollTop('anchor')">{{allText.menuItemMain}}</a></li>
+                    <li><a ui-sref="home.news"  ng-click="scrollTop('anchor')">{{allText.menuItemNews}}</a></li>
+                    <li><a ui-sref="home.fireplace"  ng-click="scrollTop('anchor')">{{allText.menuItemFires}}</a></li>
+                    <li><a ui-sref="home.sculpture" ng-click="scrollTop('anchor')">{{allText.menuItemSculptures}}</a></li>
+                    <li><a ui-sref="home.architecture"  ng-click="scrollTop('anchor')">{{allText.menuItemArchitectures}}</a></li>
+                    <li><a ui-sref="home.contact" ng-click="changeTitle(allText.menuItemContacts)" ng-click="scrollTop('anchor')">{{allText.menuItemContacts}}</a></li>
                 </ul>
             </nav>
         </div>
     </div>
-    <nav class="top-menu-hidden">
+    <nav class="top-menu-hidden" ng-style="show">
         <ul>
-            <li><a href="index.html">Головна</a></li>
-            <li><a href="news.html">Новини</a></li>
-            <li><a href="fireplaces.html">Каміни</a></li>
-            <li><a href="sculptures.html">Скульптура</a></li>
-            <li><a href="architecture.html">Архітектура</a></li>
-            <li><a href="contacts.html">Контакти</a></li>
+            <li><a ui-sref="home.main" ng-click="show={'display':'none'}">{{allText.menuItemMain}}</a></li>
+            <li><a ui-sref="home.news" ng-click="show={'display':'none'}">{{allText.menuItemNews}}</a></li>
+            <li><a ui-sref="home.fireplace" ng-click="show={'display':'none'}">{{allText.menuItemFires}}</a></li>
+            <li><a ui-sref="home.sculpture" ng-click="show={'display':'none'}">{{allText.menuItemSculptures}}</a></li>
+            <li><a ui-sref="home.architecture" ng-click="show={'display':'none'}">{{allText.menuItemArchitectures}}</a></li>
+            <li><a ui-sref="home.contact" ng-click="show={'display':'none'}">{{allText.menuItemContacts}}</a></li>
         </ul>
-        <i class="fa fa-times btn-close" aria-hidden="true"></i>
+        <i class="fa fa-times btn-close" aria-hidden="true" ng-click="show={'display':'none'}"></i>
     </nav>
-    <div class="bottom-header header-container">
+    <div class="bottom-header header-container"  ng-class="fixedActiveMenu">
         <div class="container">
-            <div class="active-menu"><a href="">Головна</a></div>
-            <div class="btn-menu"><i class="fa fa-bars" aria-hidden="true"></i></div>
+            <div class="active-menu"><a href="">{{currentTitle()}}</a></div>
+            <div class="btn-menu" ng-click="show={'display':'block'}"><i class="fa fa-bars" aria-hidden="true"></i></div>
         </div>
     </div>
+
 </header>

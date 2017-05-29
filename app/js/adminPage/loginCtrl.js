@@ -1,4 +1,4 @@
-app.controller('loginCtrl',['UserService', function (UserService) {
+app.controller('loginCtrl',['AdminService', function (AdminService) {
     var vm=this;
 
     vm.check=function () {
@@ -6,7 +6,7 @@ app.controller('loginCtrl',['UserService', function (UserService) {
     }
 
     vm.submit=function () {
-        UserService.checkLogin(vm.username, vm.password);
+        AdminService.checkLogin(vm.username, vm.password);
     }
 
 

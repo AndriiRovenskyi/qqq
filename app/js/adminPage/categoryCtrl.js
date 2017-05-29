@@ -1,28 +1,28 @@
-app.controller('categoryCtrl',['UserService', function (UserService) {
+app.controller('categoryCtrl',['AdminService', function (AdminService) {
     var vm=this;
     vm.categories;
 
 
 
     vm.addCategory=function () {
-        UserService.addCategory(vm.newCategory);
+        AdminService.addCategory(vm.newCategory);
         vm.newCategory={};
     }
     vm.changeCategory=function () {
-        UserService.changeCategory(vm.editCategory);
+        AdminService.changeCategory(vm.editCategory);
     }
     vm.deleteCategory=function (id) {
-        UserService.deleteCategory(id);
+        AdminService.deleteCategory(id);
         vm.init();
     }
 
-    vm.categoryChange=function (category) {
+    vm.categoryChange = function (category) {
         var obj = Object.assign({},category);
         vm.editCategory=obj;
     }
 
     vm.init=function () {
-        vm.categories=UserService.getCategories();
+        vm.categories=AdminService.getCategories();
     }
     vm.init();
 }])

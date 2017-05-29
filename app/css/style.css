@@ -1,36 +1,46 @@
 .admin .header {
-    height: 80px;
-    border-bottom: 1px solid gray;
+    padding: 20px;
+    height: auto;
+    /*border-bottom: 1px solid gray;*/
+    /*background: #2F2F2F;*/
 }
+
 .admin .navig {
     height: 600px;
     /*background: lightgray;*/
     /*border: 1px solid black;*/
+    box-shadow: 10px 0px 50px 0px rgba(0, 0, 0, 0.37);
 }
+
 .admin .admin_page {
     /*width: 100vw;*/
     height: 100vh;
     background-color: black;
     /*background-color: #f2f2f2;*/
 }
+
 .admin .in_nav a {
-    text-align: left;
+    text-align: center;
     display: block;
     text-decoration: none;
     background: #e6e6e6;
     border: 1px solid #d9d9d9;
     border-radius: 10px;
     padding: 6px;
-    width: 180px;
+    width: 150px;
     color: black;
     margin-top: 1px;
+    margin: 10px 0;
 }
+
 .admin .in_nav a:hover {
     background: white;
 }
+
 .admin .in_nav {
-    margin-top: 100px;
+    margin-top: 20px;
 }
+
 .admin .icon1 {
     background-image: url("../image/calendar.png");
     width: 15px;
@@ -39,6 +49,7 @@
     margin: 5px 5px;
     float: left;
 }
+
 .admin .icon2 {
     background-image: url("../image/suitcase.png");
     width: 15px;
@@ -47,6 +58,7 @@
     margin: 5px 5px;
     float: left;
 }
+
 .admin .icon3 {
     background-image: url("../image/add.png");
     width: 15px;
@@ -55,6 +67,7 @@
     margin: 5px 5px;
     float: left;
 }
+
 .admin .icon4 {
     background-image: url("../image/list.png");
     width: 15px;
@@ -63,6 +76,7 @@
     margin: 5px 5px;
     float: left;
 }
+
 .admin .icon5 {
     background-image: url("../image/add.png");
     width: 15px;
@@ -71,9 +85,11 @@
     margin: 5px 5px;
     float: left;
 }
+
 .admin .admin {
     height: 60px;
 }
+
 .admin .img_admin {
     margin-top: 6px;
     margin-left: 4px;
@@ -82,6 +98,7 @@
     height: 40px;
     background: lightgrey;
 }
+
 .admin .admin input {
     margin-top: 3px;
     font-size: 9pt;
@@ -89,33 +106,35 @@
 }
 
 .category h2 {
-    margin: 80px 30px 40px;
+    margin: 80px 0px 40px 60px;
     /*color: white;*/
     border-bottom: 1px solid gray;
 }
+
 .category table th {
     background: lightgrey;
-    height: 30px;
-    width: 80px;
+
     border: 1px solid darkgray;
-    padding-left: 10px;
+    text-align: center;
 }
-.category table {
-    width: 80%;
-}
+
 .category table td {
     color: black;
     border: 1px solid lightgray;
     padding-left: 10px;
     height: 40px;
     font-size: 10pt;
+    text-align: center;
 }
+
 .category .id {
     width: 15% !important;
 }
+
 .category .name {
     width: 60% !important;
 }
+
 .category input[value="delete"] {
     background: red;
     border-radius: 15px;
@@ -125,6 +144,7 @@
     color: white;
     margin-right: 20px;
 }
+
 .category input[value="edit"] {
     background: cornflowerblue;
     border-radius: 15px;
@@ -133,24 +153,27 @@
     width: 50px;
     color: white;
 }
-.category .btnRight{
+
+.category .btnRight {
     float: right;
     height: 35px;
 }
-
 
 .form-signin {
     max-width: 330px;
     padding: 15px;
     margin: 0 auto;
 }
+
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
     margin-bottom: 10px;
 }
+
 .form-signin .checkbox {
     font-weight: normal;
 }
+
 .form-signin .form-control {
     position: relative;
     height: auto;
@@ -159,20 +182,24 @@
     padding: 10px;
     font-size: 16px;
 }
+
 .form-signin .form-control:focus {
     z-index: 2;
 }
+
 .form-signin input[type="email"] {
     margin-bottom: -1px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 }
+
 .form-signin input[type="password"] {
     margin-bottom: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
-.form-signin a{
+
+.form-signin a {
     text-decoration: none;
     color: white;
 }
@@ -183,46 +210,57 @@
 .orders table {
     width: 100%;
 }
+
 .orders .table_arch {
     background: lightgray;
 }
+
 .orders .tbl table {
     /*color: white;*/
 }
+
 .orders .tbl table td {
     font-size: 9pt;
     border: 1px solid gray;
     padding-left: 10px;
 }
+
 .orders h2 {
     /*color: white;*/
     border-bottom: 1px solid gray;
     margin: 80px 0 30px 0;
 }
+
 .orders .tbl_zagolovok {
     background-color: lightgray;
     color: black;
     height: 35px !important;
 }
+
 .orders .tbl .table_arch {
     color: black;
 }
+
 .orders .tbl_ord th {
     border: 1px solid black;
     padding-left: 10px;
     font-size: 11pt;
 }
+
 .orders .tbl_ord tr,
 .orders .tbl_arch td {
     height: 60px;
 }
+
 .orders .done {
     width: 8% !important;
 }
+
 .orders .num {
     width: 8% !important;
     text-align: center !important;
 }
+
 .orders .okay {
     background-image: url("../image/done.svg");
     width: 30px;
@@ -230,6 +268,7 @@
     background-size: cover;
     margin: 0 auto;
 }
+
 .orders .notDane {
     background-image: url("../image/notDane.svg");
     width: 30px;
@@ -237,6 +276,7 @@
     background-size: cover;
     margin: 0 auto;
 }
+
 .orders .change {
     background-image: url("../image/change2.svg");
     width: 30px !important;
@@ -244,6 +284,7 @@
     background-size: cover;
     margin: 0 auto;
 }
+
 .orders .back {
     background-image: url("../image/back.svg");
     width: 30px;
@@ -251,25 +292,27 @@
     background-size: cover;
     margin: 0 auto;
 }
+
 .orders .amount {
     width: 10% !important;
     text-align: center !important;
 }
+
 .orders .done2 {
     width: 10%;
 }
 
-.orders .btnRight{
+.orders .btnRight {
     float: right;
     height: 35px;
 }
-
 
 .products h2 {
     /*color: white;*/
     border-bottom: 1px solid gray;
     margin: 80px 0 30px 0;
 }
+
 .products table th {
     background: lightgrey;
     height: 30px;
@@ -277,22 +320,27 @@
     border: 1px solid darkgray;
     padding-left: 10px;
 }
+
 .products table {
     width: 100%;
 }
+
 .products table td {
     border: 1px solid lightgray;
     padding-left: 10px;
     font-size: 10pt;
 }
+
 .products .id {
     width: 10% !important;
     text-align: center;
 }
+
 .products .price {
     width: 15% !important;
     text-align: center;
 }
+
 .products input[value="delete"] {
     background: red;
     border-radius: 15px;
@@ -302,6 +350,7 @@
     color: white;
     margin-right: 20px;
 }
+
 .products input[value="edit"] {
     background: cornflowerblue;
     border-radius: 15px;
@@ -310,11 +359,12 @@
     width: 50px;
     color: white;
 }
+
 .products .change {
     width: 23% !important;
 }
 
-.products .btnRight{
+.products .btnRight {
     float: right;
     height: 35px;
 }
@@ -324,6 +374,7 @@
     border-bottom: 1px solid gray;
     margin: 80px 0 30px 0;
 }
+
 .subCategory table th {
     background: lightgrey;
     height: 30px;
@@ -331,23 +382,28 @@
     border: 1px solid darkgray;
     padding-left: 10px;
 }
+
 .subCategory table {
     width: 100%;
 }
+
 .subCategory table td {
     border: 1px solid lightgray;
     padding-left: 10px;
     height: 40px;
     font-size: 10pt;
 }
+
 .subCategory .id {
     width: 10% !important;
     text-align: center;
 }
+
 .subCategory .price {
     width: 15% !important;
     text-align: center;
 }
+
 .subCategory input[value="delete"] {
     background: red;
     border-radius: 15px;
@@ -357,6 +413,7 @@
     color: white;
     margin-right: 20px;
 }
+
 .subCategory input[value="edit"] {
     background: cornflowerblue;
     border-radius: 15px;
@@ -365,12 +422,15 @@
     width: 50px;
     color: white;
 }
+
 .subCategory .change {
     width: 23% !important;
 }
-.subCategory .btnRight{
+
+.subCategory .btnRight {
     float: right;
     height: 35px;
+    margin: 0;
 }
 
 .users h2 {
@@ -378,9 +438,11 @@
     /*color: white;*/
     border-bottom: 1px solid gray;
 }
+
 .users table {
     width: 100%;
 }
+
 .users table td {
     border: 1px solid gray;
     color: white;
@@ -388,15 +450,18 @@
     padding-left: 10px;
     height: 40px;
 }
+
 .users table th {
     border: 1px solid black;
     background: lightgray;
     padding: 5px 10px;
 }
+
 .users table th:last-child {
     width: 8%;
     text-align: center;
 }
+
 .users .notDane {
     background-image: url("../../image/notDane.svg");
     width: 30px;
@@ -404,7 +469,227 @@
     background-size: cover;
     margin: 0 auto;
 }
-.users .btnRight{
+
+.users .btnRight {
     float: right;
     height: 35px;
 }
+
+/*=============================  material design in admin news ===========================*/
+/*------selescted-----*/
+
+.admin_select {
+    margin: auto;
+}
+
+/*--------------------*/
+
+.btn-material {
+    position: relative;
+
+    display: block;
+    margin: 7px auto;
+    padding: 0;
+
+    overflow: hidden;
+
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+
+    background-color: #2ecc71;
+    color: #ecf0f1;
+
+    transition: background-color .3s;
+    width: 170px;
+}
+
+.btn-material:hover, .btn-material:focus {
+    background-color: #27ae60;
+}
+
+.btn-material_warring {
+    background-color: #ffc107
+}
+
+.btn-material_warring:hover, .btn-material_warring:focus {
+    background-color: #ffc107;
+}
+
+.btn-material_warring:before {
+    background-color: #ff9800
+}
+
+.btn-material_danger:before {
+    background-color: #f44336
+}
+
+.btn-material_danger {
+    background-color: #f44336
+}
+
+.btn-material_danger:hover, .btn-material_danger:focus {
+    background-color: #f44336;
+}
+
+.btn-material > * {
+    position: relative;
+}
+
+.btn-material span {
+    display: block;
+    padding: 12px 24px;
+}
+
+.btn-material:before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: block;
+    width: 0;
+    padding-top: 0;
+
+    border-radius: 100%;
+
+    background-color: rgba(236, 240, 241, .3);
+
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.btn-material:active:before {
+    width: 120%;
+    padding-top: 120%;
+
+    transition: width .2s ease-out, padding-top .2s ease-out;
+}
+
+/*==========inputs================*/
+.group {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.input-material {
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid #757575;
+}
+
+.input-material:focus {
+    outline: none;
+}
+
+/* LABEL ======================================= */
+label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+.input-material:focus ~ label, .input-material:valid ~ label {
+    top: -20px;
+    font-size: 14px;
+    color: #5264AE;
+}
+
+/* BOTTOM BARS ================================= */
+.bar {
+    position: relative;
+    display: block;
+    width: 300px;
+}
+
+.bar:before, .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #5264AE;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+    left: 50%;
+}
+
+.bar:after {
+    right: 50%;
+}
+
+/* active state */
+.input-material:focus ~ .bar:before, .input-material:focus ~ .bar:after {
+    width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* active state */
+.input-material:focus ~ .highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-moz-keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+/*==============================================================================*/

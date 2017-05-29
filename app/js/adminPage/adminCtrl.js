@@ -1,8 +1,8 @@
-app.controller('adminCtrl',['UserService', function (UserService) {
+app.controller('adminCtrl',['AdminService', function (AdminService) {
     var vm=this;
 
     vm.init = function () {
-        UserService.checkAdmin();
+        AdminService.checkAdmin();
     }
     vm.init();
 }])

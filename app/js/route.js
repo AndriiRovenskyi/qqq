@@ -85,6 +85,13 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             controller: 'fireplaceCtrl',
             controllerAs: 'fire'
         })
+        .state('home.product', {
+            url: 'product/{fireplaceId}',
+            templateUrl: 'views/tamplates/home.product_desc.html',
+            controller: 'prodDescCtrl',
+            controllerAs: 'prod'
+        })
+
         .state('home.sculpture', {
             url: 'sculpture',
             templateUrl: 'views/tamplates/home_sculptures.html',
@@ -104,38 +111,18 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             controllerAs: 'cont'
         })
         .state('home.newsdesc', {
-            url: 'newsdesc',
+            url: 'newsdesc/{newsId}',
             templateUrl: 'views/tamplates/home.news_description.html',
             controller: 'newsDescCtrl',
             controllerAs: 'desc'
         })
-        .state('home.proddesc', {
-            url: 'proddesc',
-            templateUrl: 'views/tamplates/home.product_desc.html',
-            controller: 'prodDescCtrl',
-            controllerAs: 'prodesc'
-        })
+        .state('admin.news', {
+        url: 'news',
+        templateUrl: 'views/admin_view/news.html',
+        controller: 'myNewsCtrl',
+        controllerAs: 'news'
+    })
 
 
-})
-//
-// app.config(function (stateHelperProvider) {
-//     stateHelperProvider
-//         .state({
-//         name: 'home',
-//         templateUrl: 'views/tamplates/main.html',
-//         children: [
-//             {
-//                 name: 'main',
-//                 templateUrl: 'views/tamplates/home_main.html',
-//             }
-//         ]
-//     })
-//         .state('admin', {
-//             url: '/admin',
-//             templateUrl: 'views/admin_view/admin.html',
-//             controller: 'adminCtrl',
-//             controllerAs: 'admin'
-//         })
-// })
 
+});

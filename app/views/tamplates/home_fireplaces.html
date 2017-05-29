@@ -1,53 +1,31 @@
-
+<!--anim-slide-below-fade-->
+<div class="anim-fade">
+<!--<div class="anim-fade">-->
 <section class="fireplaces-categories">
     <div class="container">
-        <div class="categories-container">
-            <div class="categories-block active-categories">
-                <img src="images/fireplace-categories/1.png" alt="">
-                <p>Класика</p>
-            </div>
-            <div class="categories-block">
-                <img src="images/fireplace-categories/2.png" alt="">
-                <p>Модерн</p>
-            </div>
-            <div class="categories-block">
-                <img src="images/fireplace-categories/3.png" alt="">
-                <p>Бароко</p>
-            </div>
-            <div class="categories-block">
-                <img src="images/fireplace-categories/4.png" alt="">
-                <p>Кантрі</p>
-            </div>
-            <div class="arrow"></div>
+        <div class="slick-container categories-container">
+            <slick infinite=false slides-to-show=4 slides-to-scroll=1 ng-if="fire.subcategories.length">
+                <div class="categories-block" ng-class="fire.currentSub == subcategory.id ? 'active-categories' : 'n'"
+                     ng-click="fire.currentSub = subcategory.id"
+                     ng-repeat="subcategory in fire.subcategories | filter: fire.filterSub"><img
+                        src="http://localhost:8081{{subcategory.img}}"
+                        alt="">
+                    <p>{{subcategory | translator:"nameSub"}}</p>
+                </div>
+            </slick>
         </div>
     </div>
 </section>
+
 
 <section class="product-block">
     <div class="container">
-        <div class="product" >
-            <div class="main-categories-images"><img class="img" src="images/product/1.png" alt=""></div>
-            <div class="product-categories-title">Назва каміну</div>
-        </div>
-        <div class="product" >
-            <div class="main-categories-images"><img class="img" src="images/product/2.png" alt=""></div>
-            <div class="product-categories-title">Назва каміну</div>
-        </div>
-        <div class="product" >
-            <div class="main-categories-images"><img class="img" src="images/product/3.png" alt=""></div>
-            <div class="product-categories-title">Назва каміну</div>
-        </div>
-        <div class="product" >
-            <div class="main-categories-images"><img class="img" src="images/product/1.png" alt=""></div>
-            <div class="product-categories-title">Назва каміну</div>
-        </div>
-        <div class="product" >
-            <div class="main-categories-images"><img class="img" src="images/product/2.png" alt=""></div>
-            <div class="product-categories-title">Назва каміну</div>
-        </div>
-        <div class="product" >
-            <div class="main-categories-images"><img class="img" src="images/product/3.png" alt=""></div>
-            <div class="product-categories-title">Назва каміну</div>
+        <div class="product" ng-repeat="product in fire.products | filter: fire.filterProducts">
+            <a ui-sref="home.product({fireplaceId: product.id})" class="wrap-product" ng-click="scrollTop('anchor')">
+                <div class="main-categories-images"><img class="img" src="http://localhost:8081{{product.img}}" alt=""></div>
+                <div class="product-categories-title">{{product | translator:"nameCommodities"}}</div>
+            </a>
         </div>
     </div>
 </section>
+</div>
