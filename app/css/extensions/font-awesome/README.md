@@ -99,6 +99,6 @@ Build the project and documentation:
 
     $ bundle exec jekyll build
 
-Or serve it on a local server on http://185.65.246.204:7998/Font-Awesome/:
+Or serve it on a local server on http://localhost:7998/Font-Awesome/:
 
     $ bundle exec jekyll -w serve

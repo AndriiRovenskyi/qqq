@@ -11,16 +11,7 @@
         <div class="product-description-info">
             <div class="product-description-title">{{prod.currentProduct | translator:"nameCommodities"}}</div>
             <div class="product-description-text">
-                <!--<p>Marlboro a slim mantel surround with an arch that accents the firebox. Pictured in precast which is similar to cast stone. Elegant curved trim with straight lines make it a great contemporary option. This design also works great in a traditional or modern setting. Have it installed in you craftsman home.-->
-                <!--</p>-->
-                <!--<p>Typical Dimensions: 64″ wide x 52″ high *can be made to custom dimensions. Firebox Opening: made-to-order</p>-->
-                <!--<p>Stone: cast stone, limestone, sandstone, marble, travertine etc. Available in many different colors, textures and finishes.</p>-->
-                <!--<p>Price: Cast Stone $3,599</p>-->
-                <!--<p>Travertine $3,999</p>-->
-                <!--<p>Sandstone $4,099</p>-->
-                <!--<p>Limestone $5,300</p>-->
-                <!--<p>Marble $4,120</p>-->
-                <p>{{prod.currentProduct | translator:"description"}}</p>
+                <p ng-bind-html="prod.currentProduct | translator:'description'"></p>
             </div>
         </div>
     </div>

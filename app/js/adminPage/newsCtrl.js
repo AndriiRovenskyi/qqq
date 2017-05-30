@@ -8,7 +8,7 @@ function myFunc(AdminService) {
     vm.addNew=function () {
         vm.newNews.img = vm.image.base64;
         AdminService.addNewies(vm.newNews).then(function (data) {
-            console.log(data);
+
             vm.newies1.push(data.data[0])
         });
         vm.newNews={};
@@ -43,9 +43,9 @@ function myFunc(AdminService) {
     vm.init = function () {
         AdminService.getNewies().then(function (data) {
             vm.newies1 = data.data;
-            console.log(vm.newies1);
+
         });
-        console.log(vm.newies1);
+
     };
     vm.init();
 

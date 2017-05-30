@@ -7,7 +7,7 @@
             </div>
             <div class="news-block-contain">
                 <div class="news-block-title">{{news | translator:"nameNew"}}</div>
-                <div class="news-block-text"><p>{{news | translator:"description"}}</p>
+                <div class="news-block-text"><p ng-bind-html="news | translator:'description'"></p>
                 </div>
                 <input type="button" value="{{allText.newsBtn}}" class="none news-block-button" ui-sref="home.newsdesc({newsId: news.id})" ng-click="scrollTop('anchor')">
                 <div class="date_of_news">{{news.data_news | dataFilter}}</div>

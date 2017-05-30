@@ -6,8 +6,6 @@ app.directive('homeHeader', function($rootScope,$http,LanguageService,$window) {
         link: function(scope, element, attr) {
             scope.changeLanguage=function (lang) {
                 scope.active=true;
-
-
                 localStorage.setItem('language',lang);
                 $rootScope.language = lang;
 

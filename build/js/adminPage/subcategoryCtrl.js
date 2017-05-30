@@ -22,7 +22,7 @@ app.controller('subcategoryCtrl',['UserService',function (UserService) {
         UserService.deleteSubcategory(x);
     }
     vm.subcategoryId=function (subcategory) {
-        console.log(subcategory)
+
         vm.newSubcategory=subcategory;
     }
 

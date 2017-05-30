@@ -1,3 +1,5 @@
+
+
 <div class="top-header" id="anchor">
     <div class="container">
         <div class="contact">
@@ -37,21 +39,21 @@
             </nav>
         </div>
     </div>
-    <nav class="top-menu-hidden" ng-style="show">
+    <nav class="top-menu-hidden" ng-if="home.show" >
         <ul>
-            <li><a ui-sref="home.main" ng-click="show={'display':'none'}">{{allText.menuItemMain}}</a></li>
-            <li><a ui-sref="home.news" ng-click="show={'display':'none'}">{{allText.menuItemNews}}</a></li>
-            <li><a ui-sref="home.fireplace" ng-click="show={'display':'none'}">{{allText.menuItemFires}}</a></li>
-            <li><a ui-sref="home.sculpture" ng-click="show={'display':'none'}">{{allText.menuItemSculptures}}</a></li>
-            <li><a ui-sref="home.architecture" ng-click="show={'display':'none'}">{{allText.menuItemArchitectures}}</a></li>
-            <li><a ui-sref="home.contact" ng-click="show={'display':'none'}">{{allText.menuItemContacts}}</a></li>
+            <li><a ui-sref="home.main" ng-click="home.show=false">{{allText.menuItemMain}}</a></li>
+            <li><a ui-sref="home.news" ng-click="home.show=false">{{allText.menuItemNews}}</a></li>
+            <li><a ui-sref="home.fireplace" ng-click="home.show=false">{{allText.menuItemFires}}</a></li>
+            <li><a ui-sref="home.sculpture" ng-click="home.show=false">{{allText.menuItemSculptures}}</a></li>
+            <li><a ui-sref="home.architecture" ng-click="home.show=false">{{allText.menuItemArchitectures}}</a></li>
+            <li><a ui-sref="home.contact" ng-click="home.show=false">{{allText.menuItemContacts}}</a></li>
         </ul>
-        <i class="fa fa-times btn-close" aria-hidden="true" ng-click="show={'display':'none'}"></i>
+        <i class="fa fa-times btn-close" aria-hidden="true" ng-click="home.show=false"></i>
     </nav>
     <div class="bottom-header header-container"  ng-class="fixedActiveMenu">
         <div class="container">
             <div class="active-menu"><a href="">{{currentTitle()}}</a></div>
-            <div class="btn-menu" ng-click="show={'display':'block'}"><i class="fa fa-bars" aria-hidden="true"></i></div>
+            <div class="btn-menu" ng-click="home.show=true"><i class="fa fa-bars" aria-hidden="true"></i></div>
         </div>
     </div>
 

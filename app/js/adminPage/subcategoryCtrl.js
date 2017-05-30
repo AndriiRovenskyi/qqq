@@ -14,6 +14,11 @@ app.controller('subcategoryCtrl',['AdminService',function (AdminService) {
     vm.changeSubcategory=function (category) {
         vm.editSubcat=Object.assign({},category);
     }
+    
+    vm.withOut = function (el) {
+        return el.id_cat != 3;
+    }    
+    
     vm.changeSave=function(){
 
         if(vm.editSubcat!=null){
@@ -41,7 +46,7 @@ app.controller('subcategoryCtrl',['AdminService',function (AdminService) {
         });
     }
     vm.subcategoryId=function (subcategory) {
-        console.log(subcategory)
+
         vm.newSubcategory=subcategory;
     }
 

@@ -6,11 +6,11 @@
                 <figcaption>{{desc.currentNews | translator:"nameNew"}}</figcaption>
                 <img src="http://185.65.246.204:8081{{desc.currentNews.img}}" alt="" align="left">
                 <div class="news-description-title">{{desc.currentNews | translator:"nameNew"}}</div>
-                <div class="news-description-text">
-                    {{desc.currentNews | translator:"description"}}
+                <div class="news-description-text" ng-bind-html="desc.currentNews | translator:'description'">
+                    <!--{{desc.currentNews | translator:"desc ription"}}-->
                 </div>
             </div>
-            <!--<div class="news-description-date"></div>-->
+            <!--<div class="news-description-date">{{news.data_news | dataFilter}}</div>-->
         </div>
     </div>
 </section>
